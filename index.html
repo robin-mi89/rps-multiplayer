@@ -5,33 +5,66 @@
         <link rel="stylesheet" type="text/css" href="assets/css/week6.css">
         <meta charset="UTF-8">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Giphy-tastic!</title>
+        <title>Extreme Rock Paper Scissors!</title>
     </head>
     <body>
 
     
     <header>
          <div class = "container">
-            <h1 style = "text-align: center" >Giphy This Up!</h1>
+            <h1 style = "text-align: center" >Play Extreme! Rock Paper Scissors!</h1>
          </div>
     </header>
 
    
     <div class = "container">
-        <div id = "buttons"></div>
-        <br>
-        <form id="topic-form">
-        <label for="topic-input">Add a Topic Bro</label>
-        <input type="text" id="topic-input"><br>
-        <br>
-        <!-- Button triggers new movie to be added -->
-        <input id="add-topic" type="submit" value="Add a Topic, I dare you." class = "btn btn-outline-danger">
+        
+        <form>
+                <div class="form-group">
+                    <label for="user-name">Your Name</label>
+                    <input class="form-control" id="user-name" type="text">
+                    <label for="chat-msg">Your Message</label>
+                    <input class="form-control" id="chat-msg" type="text">
+                </div>
+                <button class="btn btn-primary" id="submit-message" type="submit">Submit</button>
         </form>
 
         <div class="row">
-            <div class="col-sm-6" id="image-holder"></div>
+            <div class="col-sm-4">
+                <h3 id="player1name">No Player</h3>
+                <p id = "player1wins"></p>
+                <p id = "player1losses"></p>
+                <p id = "player1status"></p>
+                <div id = "player1choices">
+                    <p id="player1rock" value="rock" class="selector" side="player1">Rock!</p>
+                    <p id="player1scissor" value="scissor" class="selector" side="player1">Scissors</p>
+                    <p id="player1paper" value="paper" class="selector" side="player1">Paper!</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <h3 id="player2name">No Player</h3>
+                <p id = "player2wins"></p>
+                <p id = "player2losses"></p>
+                <p id = "player2status"></p>
+                <div id = "player2choices">
+                    <p id="player2rock" value="rock" class="selector">Rock!</p>
+                    <p id="player2scissor" value="scissor" class="selector">Scissors</p>
+                    <p id="player2paper" value="paper" class="selector">Paper!</p>
+                </div>
+            </div>
         </div>
+        <div class = "row">
+            <p id = "results"></p>
+        </div>
+
+        <button class ="btn btn-primary" id="join-game">Join Game</button>
+
+        <div id= "chat"></div>
+
     </div>
     
     
@@ -43,7 +76,7 @@
             <p class= "text-muted text-center"> © Copyright 2017 Robin Mi</p>
         </footer>-->
 
-        <script src="assets/javascript/week6.js"></script> 
+        <script src="assets/javascript/week7.js"></script> 
         
     </body>
 </html>
