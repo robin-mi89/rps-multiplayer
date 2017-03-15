@@ -49,7 +49,7 @@
         }
         else
         {
-             database.ref().set(
+             database.ref().update(
             {
                 messages: []
             })
@@ -153,6 +153,11 @@ database.ref("player/player2").on("value",
     var message = $("#user-name").val().trim() + ": " + $("#chat-msg").val().trim();
         chatlog.push(message);
 
+    if (chatlog.length > 25)
+    {
+        chatlog.splice(0,1);
+    }
+    
         database.ref().set(
     {
             messages: chatlog
