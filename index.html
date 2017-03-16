@@ -1,7 +1,10 @@
 <!doctype html>
 <html lang="en-us">
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/week6.css">
         <meta charset="UTF-8">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -28,8 +31,10 @@
                     <label for="chat-msg">Your Message</label>
                     <input class="form-control" id="chat-msg" type="text">
                 </div>
+                <button class ="btn btn-primary" id="join-game">Join Game</button>
                 <button class="btn btn-primary" id="submit-message" type="submit">Submit</button>
         </form>
+        
 
         <div class="row">
             <div class="col-sm-4">
@@ -43,8 +48,11 @@
                     <p id="player1paper" value="paper" class="selector" side="player1">Paper!</p>
                 </div>
             </div>
+
             <div class="col-sm-4">
+                 <p id = "results"></p>
             </div>
+
             <div class="col-sm-4">
                 <h3 id="player2name">No Player</h3>
                 <p id = "player2wins"></p>
@@ -57,18 +65,26 @@
                 </div>
             </div>
         </div>
-        <div class = "row">
-            <p id = "results"></p>
+
+        
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Messages</div>
+            <div class="panel-body">
+                <table class="table table-hover" id= "chat">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Messages</th>
+                    </tr>
+                    <tr>
+                        <td>Robin:</td>
+                        <td>Hello!</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-
-        <button class ="btn btn-primary" id="join-game">Join Game</button>
-
-        <div id= "chat"></div>
-
     </div>
-    
-    
-         
+
         <audio id = "audio"></audio>
 
 

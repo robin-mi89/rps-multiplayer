@@ -33,7 +33,7 @@
         //--2. name, throw, wins, losses...
 
         //one ref base on the messages, alters chat log when the messages changes. 
-  database.ref().on("value",
+  database.ref("/messages").on("value",
    function(snapshot) 
    {
        $("#chat").empty();
@@ -42,9 +42,11 @@
             chatlog = snapshot.val().messages; 
             for (i = 0; i < chatlog.length; i++)
             {
-                addText = chatlog[i];
-                $("#chat").append(addText);
-                $("#chat").append($("<br>"));
+                addRow = $("<tr>");
+                addText = $("<td>")
+                addText.text(chatlog[i]);
+                addRow.append(addText);
+                $("#chat").append(addRow);
             }
         }
         else
@@ -116,6 +118,7 @@ database.ref("player/player2").on("value",
 
 
     $("#join-game").on("click", function(event){
+        event.preventDefault();
         if (player1 === null) //if player1 is not set, make player now player1
         {
             player1 = new Player($("#user-name").val().trim(), "", 0, 0);
@@ -158,7 +161,7 @@ database.ref("player/player2").on("value",
         chatlog.splice(0,1);
     }
     
-        database.ref().set(
+        database.ref("/messages").set(
     {
             messages: chatlog
     })
