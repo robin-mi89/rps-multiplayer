@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets/css/week6.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/week7.css">
         <meta charset="UTF-8">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
@@ -28,11 +28,8 @@
                 <div class="form-group">
                     <label for="user-name">Your Name</label>
                     <input class="form-control" id="user-name" type="text">
-                    <label for="chat-msg">Your Message</label>
-                    <input class="form-control" id="chat-msg" type="text">
                 </div>
                 <button class ="btn btn-primary" id="join-game">Join Game</button>
-                <button class="btn btn-primary" id="submit-message" type="submit">Submit</button>
         </form>
         
 
@@ -43,9 +40,9 @@
                 <p id = "player1losses"></p>
                 <p id = "player1status"></p>
                 <div id = "player1choices">
-                    <p id="player1rock" value="rock" class="selector" side="player1">Rock!</p>
-                    <p id="player1scissor" value="scissor" class="selector" side="player1">Scissors</p>
-                    <p id="player1paper" value="paper" class="selector" side="player1">Paper!</p>
+                    <p id="player1rock" value="rock" class="selector" side="player1" style = "text-align: center">Rock!</p>
+                    <p id="player1scissor" value="scissor" class="selector" side="player1" style = "text-align: center">Scissors!</p>
+                    <p id="player1paper" value="paper" class="selector" side="player1" style = "text-align: center">Paper!</p>
                 </div>
             </div>
 
@@ -59,14 +56,18 @@
                 <p id = "player2losses"></p>
                 <p id = "player2status"></p>
                 <div id = "player2choices">
-                    <p id="player2rock" value="rock" class="selector">Rock!</p>
-                    <p id="player2scissor" value="scissor" class="selector">Scissors</p>
-                    <p id="player2paper" value="paper" class="selector">Paper!</p>
+                    <p id="player2rock" value="rock" class="selector" style = "text-align: center">Rock!</p>
+                    <p id="player2scissor" value="scissor" class="selector" style = "text-align: center">Scissors!</p>
+                    <p id="player2paper" value="paper" class="selector" style = "text-align: center">Paper!</p>
                 </div>
             </div>
         </div>
 
-        
+        <div class="form-group">
+        <label for="chat-msg">Your Message</label>
+                    <input class="form-control" id="chat-msg" type="text">
+        </div>
+        <button class="btn btn-primary" id="submit-message" type="submit">Submit</button>
 
     <div class="panel panel-primary">
         <div class="panel-heading">Messages</div>
